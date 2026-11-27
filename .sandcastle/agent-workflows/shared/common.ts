@@ -29,7 +29,8 @@ export const writeJson = (filename: string, value: unknown): void => {
 // use any tool. Claude Code also accepts `permissionMode: "auto"` here for
 // AI-mediated approvals instead (Claude only; other agents don't offer it).
 export const claudeAgent = () =>
-  sandcastle.codex("gpt-6-astra-high", {
+  sandcastle.codex("gpt-6-astra", {
+    effort: "high",
     env: {
       CODEX_API_KEY: required("OPENAI_API_KEY"),
     },
